@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Detail Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <Style>
+        #nav_2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .main_container {
+            display: flex;
+            justify-content: start;
+            padding: 0px;
+        }
+
+        .right_main_container {
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    </Style>
+</head>
+
+<body>
+    <!-- .............................HEADER SECTION ............................. -->
+    <header>
+        <!-- As a link -->
+        <nav class="navbar navbar-expand-lg" id="nav_bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">NavCare Portal
+                    <sup>&reg</sup>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hospitals
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Apollo Hospital</a></li>
+                                <li><a class="dropdown-item" href="#">Zydus Hospital</a></li>
+                                <li><a class="dropdown-item" href="#">Narayana Health Hospital</a></li>
+                                <li><a class="dropdown-item" href="#">Artemis Hospital</a></li>
+                                <li><a class="dropdown-item" href="#">Medanta Hospital</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Other popular hospitals..</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- ........................SECOND NAV BAR........................  -->
+        <ul class="nav" id="nav_2"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <h1>Fill Patient Information</h1>
+        </ul>
+    </header>
+    <!-- .................................MAIN SECTION........................................... -->
+    <main class="main">
+        <div class="main_container">
+            <div class="sidebar_container">
+                <a href="" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="25" height="25" src="https://img.icons8.com/color/48/analytics.png" alt="analytics"
+                        style="margin-right: 5px;" />
+                    Dashboard
+                </a>
+                <a href="" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="25" height="25" src="https://img.icons8.com/fluency/48/administrator-male.png"
+                        alt="administrator-male" style="margin-right: 5px;" />
+                    Admin Login
+                </a>
+                <a href="" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="24" height="24" src="https://img.icons8.com/plasticine/100/form.png" alt="form"
+                        style="margin-right: 5px;" />
+                    Patient Detail Form
+                </a>
+                <a href="" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="24" height="24" src="https://img.icons8.com/dusk/64/user-credentials.png"
+                        alt="user-credentials" style="margin-right: 5px;" />
+                    Patient Info Access Portal
+                </a>
+                <a href="add_staff.html"
+                    style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="24" height="24" src="https://img.icons8.com/fluency/48/add-user-male.png"
+                        alt="add-user-male" style="margin-right: 5px;" />
+                    Create New Staff Account
+                </a>
+            </div>
+            <div class="right_main_container">
+                <div class="progress_bar">
+                    <div id="progress"></div>
+                    <div class="progress-steps progress_active" data-title="Basic Information"></div>
+                    <div class="progress-steps" data-title="Contact Information"></div>
+                    <div class="progress-steps" data-title="Hospital Information"></div>
+                    <div class="progress-steps" data-title="Patient Information"></div>
+                </div>
+                <div class="form_container">
+                    <form action="" method="">
+                        <!-- THIS IS THE FIRST CONTAINER -->
+                        <div class="container" >
+                            <div class="row justify-content-between">
+                                <div class="col-md-5">
+                                    <h4 style="color: #147849;margin-bottom: 20px;">Basic Information</h4>
+                                    <div>
+                                        <label for="firstname" class="labels">First Name </label>
+                                        <br>
+                                        <input type="text" id="name" class="inputs" name="firstname" required
+                                            placeholder="enter the firstname">
+                                    </div>
+                                    <div>
+                                        <label for="age" class="labels">Age </label>
+                                        <br>
+                                        <input type="number" id="age" name="age" class="inputs" required
+                                            placeholder="enter the assumed age">
+                                    </div>
+                                    <div class="gender">
+                                        <label for="gender" class="labels">Gender </label>
+                                        <br>
+                                        <label for="male" class="labels">Male </label>
+                                        <input type="radio" name="gender" id="male" value="Male"
+                                            style="margin-right: 15px;">
+                                        <label for="female" class="labels">Female </label>
+                                        <input type="radio" name="gender" id="female" value="Female"
+                                            style="margin-right: 15px;">
+                                        <label for="others" class="labels">Others</label>
+                                        <input type="radio" name="gender" id="others" value="Others"
+                                            style="margin-bottom: 45px;">
+                                    </div>
+                                    <div class="">
+                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    <div style="margin-top: 49px;">
+                                        <label for="lastname" class="labels">Last Name </label>
+                                        <br>
+                                        <input type="text" id="lastname" class="inputs" name="lastname" required
+                                            placeholder="enter the lastname">
+                                    </div>
+                                    <div>
+                                        <label for="blood_group" class="labels">Blood Group </label>
+                                        <br>
+                                        <input type="text" id="blood_group" name="blood_group" class="inputs" required
+                                            placeholder="enter the blood group" style="margin-bottom: 114px;">
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-outline-success next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- THIS IS THE SECOND CONTAINER -->
+                        <div class="container" style="display: none;">
+                            <div class="row justify-content-between">
+                                <div class="col-md-5">
+                                    <h4 style="color: #147849;margin-bottom: 20px;">Contact Information</h4>
+                                    <div>
+                                        <Label for="emergency_number" class="labels">Emergency Number </Label>
+                                        <br>
+                                        <input type="number" id="emergency_number" name="emergency_number"
+                                            class="inputs" required placeholder="enter the number ">
+                                    </div>
+                                    <div class="">
+                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    <div style="margin-top: 49px;">
+                                        <Label for="email" class="labels">Email </Label>
+                                        <br>
+                                        <input type="email" id="email" name="email" class="inputs" required
+                                            placeholder="enter email ">
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-outline-success next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- THIS IS THE THIRD CONTAINER -->
+                        <div class="container" style="display: none;">
+                            <div class="row justify-content-between">
+                                <div class="col-md-5">
+                                    <h4 style="color: #147849;margin-bottom: 20px;">Hospital Information</h4>
+                                    <div>
+                                        <label for="hospital_name" class="labels">Hospital Name </label>
+                                        <br>
+                                        <input type="text" id="hospital_name" name="hospital_name" class="inputs"
+                                            required placeholder="enter the hospital name">
+                                    </div>
+                                    <div>
+                                        <label for="ward_name" class="labels">Ward/Block Name : </label>
+                                        <br>
+                                        <input type="text" id="ward_name" name="ward_name" class="inputs" required
+                                            placeholder="enter the ward block">
+                                    </div>
+                                    <div>
+                                        <label for="date_n_time" class="labels">Date & Time </label>
+                                        <br>
+                                        <input type="datetime-local" id="date_n_time" name="date_n_time" class="inputs">
+                                    </div>
+                                    <div class="" style="margin-top: 20px;"> 
+                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    <div style="margin-top: 49px;">
+                                        <label for="hospital_link" class="labels">Hospital Link </label>
+                                        <br>
+                                        <input type="text" id="hospital_link" name="hospital_link" class="inputs"
+                                            required placeholder="give the link to your hospital!">
+                                    </div>
+                                    <div>
+                                        <label for="bed_num" class="labels">Bed Number : </label>
+                                        <br>
+                                        <input type="number" id="bed_num" name="bed_number" class="inputs" required
+                                            placeholder="enter the bed number">
+                                    </div>
+                                    <div>
+                                        <label for="condition" class="labels">Current Condition </label>
+                                        <br>
+                                        <select name="condition" class="inputs" id="condition" required
+                                            style="padding-left: 5px;
+                                                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                            <option value="critical">Critical</option>
+                                            <option value="stable">Stable</option>
+                                            <option value="serious">Serious</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-end" style="margin-top: 20px;">
+                                        <button type="button" class="btn btn-outline-success  next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- THIS IS THE LAST CONTAINER -->
+                         <div class="container" style="display: none;">
+                            <div class="row justify-content-between">
+                                <div class="col-md-5">
+                                    <h4 style="color: #147849;margin-bottom: 20px;">Patient Information</h4>
+                                    <div>
+                                        <label for="funds" class="labels">Estimated Funds Required </label>
+                                        <br>
+                                        <input type="number" id="funds" name="funds" class="inputs" required     placeholder="estimated funds required">              
+                                    </div>
+                                    <div>
+                                        <label for="initial_info" class="labels">Initial Diagnosis </label>
+                                        <br>
+                                        <textarea placeholder="Short description of patient’s condition" id="initial_info" name="Initial_info"
+                                            class="inputs" required style="height: 125px;padding-top: 0.5rem;"></textarea>                  
+                                    </div>
+                                    <div class="">
+                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    <div style="margin-top: 49px;">
+                                        <label for="urgency" class="labels">Urgency Level </label>
+                                        <br>
+                                        <select name="Urgency" id="urgency"  class="inputs" required 
+                                        style="padding-left: 5px;
+                                                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                            <option value="immediate">Immediate</option>
+                                            <option value="Within_24_hours">Within 24 hours</option>
+                                            <option value="normal">Normal</option>
+                                        </select>              
+                                    </div>
+                                    <div class="d-flex justify-content-end" style="margin-top: 200px;">
+                                        <button type="button" class="btn btn-outline-success" id="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer_container">
+        <div class="footer_links">
+            <div>
+                <h4>News & Media</h4>
+                <a class="border_a">News</a> <br>
+                <a class="border_a">Events</a> <br>
+                <a class="border_a">Gallery</a> <br>
+                <a class="border_a">Certifications</a> <br>
+                <a class="border_a">Career</a> <br>
+            </div>
+            <div>
+                <h4>Specialities</h4>
+                <a class="border_a">Clinics</a> <br>
+                <a class="border_a">Critical Care & Emergency</a> <br>
+                <a class="border_a">Cardiac Health</a> <br>
+                <a class="border_a">Cancers</a> <br>
+                <a class="border_a">Genetics</a> <br>
+            </div>
+            <div>
+                <h4>IVF</h4>
+                <a class="border_a">Liver Care</a> <br>
+                <a class="border_a">Neuro Science</a> <br>
+                <a class="border_a">Orthapadics</a> <br>
+                <a class="border_a">Padeatrics</a> <br>
+                <a class="border_a">Physcology</a> <br>
+            </div>
+        </div>
+        <hr id="horizontal_line">
+        <div style="display: flex; justify-content: space-around; padding-right: 100px;">
+            <div class="svg_style" style="display: flex; padding-left: 75px;padding-top: 16px;">
+                <a href="" target="_blank" class="svg_a">
+                    <img src="SVG's/facebook.svg" alt="my_facebook" style="height: 45px;width: 45px;">
+                </a>
+                <a href="" target="_blank" class="svg_a">
+                    <img src="SVG's/insta.svg" alt="my_instagram" style="height: 45px;width: 45px;">
+                </a>
+                <a href="" target="_blank" class="svg_a">
+                    <img src="SVG's/twitter.svg" alt="my_twitter" style="height: 40px;width: 40px;">
+                </a>
+                <a href="" target="_blank" class="svg_a">
+                    <img src="SVG's/youtube.svg" alt="my_twitter" style="height: 40px;width: 40px;">
+                </a>
+                <a href="" target="_blank" class="svg_a">
+                    <img src="SVG's/linkedin.svg" alt="my_linkdin" style="height: 40px;width: 40px;">
+                </a>
+            </div>
+            <div class="developed" style="margin-top: 25px;">
+                <p>Developed and maintained by "Ashish Sonagara".</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-around; padding-right: 100px;">
+            <div class="watermarks">
+                <p>&copy;2024 NavCare Project Private Limited. All rights reserved.</p>
+            </div>
+            <div style="display: flex; justify-content: space-around; width: 30%; margin-top: 6px;">
+                <div><a href="" style="text-decoration: none;color: black;">Terms & Condition</a></div>
+                <div style="width: 1.8px; height: 18px; background-color: black; margin-top: 6px;"></div>
+                <div><a href="" style="text-decoration: none;color: black;">Privacy & Policy</a></div>
+                <div style="width: 2px; height: 18px; background-color: black; margin-top: 6px;"></div>
+                <div><a href="" style="text-decoration: none;color: black;">Payment & Policy</a></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+</html>
+
+<!--  -->
+<!-- .................SECTION 1 STARTS..................... -->
+<!-- <div id="first_section">
+            <h5 style="color: #147849;margin-bottom: 20px;">Basic Information</h5>
+            <div class="names">
+                <div>
+                    <label for="firstname" class="labels">First Name </label>
+                    <br>
+                    <input type="text" id="name" class="inputs" name="firstname" required
+                        placeholder="enter the firstname">
+                </div>
+                <div>
+                    <label for="lastname" class="labels">Last Name </label>
+                    <br>
+                    <input type="text" id="lastname" class="inputs" name="lastname" required
+                        placeholder="enter the lastname">
+                </div>
+            </div>
+            <br>
+            <div class="names">
+                <div>
+                    <label for="age" class="labels">Age </label>
+                    <br>
+                    <input type="number" id="age" name="age" class="inputs" required
+                        placeholder="enter the assumed age">
+                </div>
+                <div>
+                    <label for="blood_group" class="labels">Blood Group </label>
+                    <br>
+                    <input type="text" id="blood_group" name="blood_group" class="inputs" required
+                        placeholder="enter the blood group">
+                </div>
+            </div>
+            <br>
+            <div class="gender">
+                <label for="gender" class="labels">Gender </label>
+                <br>
+                <label for="male" class="labels">Male </label>
+                <input type="radio" name="gender" id="male" value="Male" style="margin-right: 15px;">
+                <label for="female" class="labels">Female </label>
+                <input type="radio" name="gender" id="female" value="Female" style="margin-right: 15px;">
+                <label for="others" class="labels">Others</label>
+                <input type="radio" name="gender" id="others" value="Others">
+            </div>
+            <hr style="margin: 20px 5px;">
+            <h5 style="color: #147849;margin-bottom: 20px;">Contact Information</h5>
+            <div class="contact">
+                <div>
+                    <Label for="emergency_number" class="labels">Emergency Number </Label>
+                    <br>
+                    <input type="number" id="emergency_number" name="emergency_number" class="inputs" required
+                        placeholder="enter the number ">
+                </div>
+                <div>
+                    <Label for="email" class="labels">Email </Label>
+                    <br>
+                    <input type="email" id="email" name="email" class="inputs" required placeholder="enter email ">
+                </div>
+            </div>
+            <hr style="margin: 20px 5px;">
+            <h5 style="color: #147849;margin-bottom: 20px;">Hospital Information</h5>
+            <div class="names">
+                <div>
+                    <label for="hospital_name" class="labels">Hospital Name </label>
+                    <br>
+                    <input type="text" id="hospital_name" name="hospital_name" class="inputs" required
+                        placeholder="enter the hospital name">
+                </div>
+                <div>
+                    <label for="hospital_link" class="labels">Hospital Link </label>
+                    <br>
+                    <input type="text" id="hospital_link" name="hospital_link" class="inputs" required
+                        placeholder="give the link to your hospital!">
+                </div>
+            </div>
+            <br>
+            <div class="names">
+                <div>
+                    <label for="ward_name" class="labels">Ward/Block Name : </label>
+                    <br>
+                    <input type="text" id="ward_name" name="ward_name" class="inputs" required
+                        placeholder="enter the ward block">
+                </div>
+                <div>
+                    <label for="bed_num" class="labels">Bed Number : </label>
+                    <br>
+                    <input type="number" id="bed_num" name="bed_number" class="inputs" required
+                        placeholder="enter the bed number">
+                </div>
+            </div>
+            <br>
+            <div class="names">
+                <div>
+                    <label for="date_n_time" class="labels">Date & Time </label>
+                    <br>
+                    <input type="datetime-local" id="date_n_time" name="date_n_time" class="inputs">
+                </div>
+                <div>
+                    <label for="condition" class="labels">Current Condition </label>
+                    <br>
+                    <select name="condition" class="inputs" id="condition" required
+                        style="
+                                                            padding-left: 5px;
+                                                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                        <option value="critical">Critical</option>
+                        <option value="stable">Stable</option>
+                        <option value="serious">Serious</option>
+                    </select>
+                </div>
+            </div>
+        </div> -->
+<!-- .................SECTION 3 STARTS..................... -->
+<!-- <div id="third_section" style="display: none;">
+            <h5 style="color: #147849;margin-bottom: 20px;">Patient Information</h5>
+            <div class="names">
+                <div>
+                    <label for="funds" class="labels">Estimated Funds Required </label>
+                    <br>
+                    <input type="number" id="funds" name="funds" class="inputs" required style="width: 215px;"
+                        placeholder="estimated funds required">
+                </div>
+                <div>
+                    <label for="urgency" class="labels">Urgency Level </label>
+                    <br>
+                    <select name="Urgency" id="urgency" style="height: 40px;
+                                    width: 200px;
+                                    margin-right: 60px;
+                                    padding-left: 5px;
+                                    border-radius: 8px;
+                                    border: 1px solid #147849;
+                                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)" required>
+                        <option value="immediate">Immediate</option>
+                        <option value="Within_24_hours">Within 24 hours</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="initial_info" class="labels">Initial Diagnosis </label>
+                <br>
+                <textarea placeholder="Short description of patient’s condition" id="initial_info" name="Initial_info"
+                    class="inputs" required style="height: 85px;width: 450px;padding: 5px 10px;"></textarea>
+            </div>
+            <br><br><br>
+            <button type="button" class="btn btn-outline-success" style="margin-left: 175px;">Submit Form</button>
+        </div>
