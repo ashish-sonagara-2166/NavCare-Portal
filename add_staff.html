@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +17,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             color: white;
         }
-        .main_container{
+
+        .main_container {
             display: flex;
             justify-content: start;
             padding: 0px;
         }
+
         .right_main_container {
             height: 100%;
             width: 90%;
@@ -33,6 +36,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <!-- As a link -->
@@ -42,8 +46,8 @@
                     <sup>&reg</sup>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -87,7 +91,8 @@
             </div>
         </nav>
         <!-- ........................SECOND NAV BAR........................  -->
-        <ul class="nav" id="nav_2" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <ul class="nav" id="nav_2"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             <h1>Add Staff</h1>
         </ul>
     </header>
@@ -104,19 +109,21 @@
                         alt="administrator-male" style="margin-right: 5px;" />
                     Admin Login
                 </a>
-                <a href="patient_detail.html" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                <a href="patient_detail.html"
+                    style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
                     <img width="24" height="24" src="https://img.icons8.com/plasticine/100/form.png" alt="form"
                         style="margin-right: 5px;" />
                     Patient Detail Form
                 </a>
                 <a href="" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
-                    <img width="24" height="24" src="https://img.icons8.com/dusk/64/user-credentials.png" alt="user-credentials"
-                        style="margin-right: 5px;" />
+                    <img width="24" height="24" src="https://img.icons8.com/dusk/64/user-credentials.png"
+                        alt="user-credentials" style="margin-right: 5px;" />
                     Patient Info Access Portal
                 </a>
-                <a href="add_staff.html" style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
-                    <img width="24" height="24" src="https://img.icons8.com/fluency/48/add-user-male.png" alt="add-user-male"
-                        style="margin-right: 5px;" />
+                <a href="add_staff.html"
+                    style="display: flex;justify-content: start;align-items: center;padding-left: 20px;">
+                    <img width="24" height="24" src="https://img.icons8.com/fluency/48/add-user-male.png"
+                        alt="add-user-male" style="margin-right: 5px;" />
                     Create New Staff Account
                 </a>
             </div>
@@ -128,30 +135,30 @@
                     <div class="progress-steps" data-title="Submit Form"></div>
                 </div>
                 <div class="form_container">
-                    <form action="" method="">
+                    <form action="" method="" style="position: relative;">
                         <!-- .................FORM STARTS HERE..................... -->
                         <!-- THIS IS THE FIRST CONTAINER -->
-                        <div class="container" style="display: none;">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-md-5">
                                     <h4 style="color: #147849;margin-bottom: 20px;">Staff Information</h4>
                                     <div>
                                         <label for="fname" class="labels">First Name </label>
                                         <br>
-                                        <input type="text" id="name" class="inputs" name="firstname" required placeholder="enter the firstname">                      
+                                        <input type="text" id="name" class="inputs" name="firstname" required
+                                            placeholder="enter the firstname">
                                     </div>
                                     <div>
                                         <label for="age" class="labels">Age </label>
                                         <br>
-                                        <input type="number" id="age" name="age" class="inputs" required placeholder="enter the assumed age">                      
+                                        <input type="number" id="age" name="age" class="inputs" required
+                                            placeholder="enter the assumed age">
                                     </div>
                                     <div>
                                         <Label for="email" class="labels">Email </Label>
                                         <br>
-                                        <input type="email" id="email" name="email" class="inputs" required placeholder="enter email ">                      
-                                    </div>
-                                    <div class="" style="margin-top: 15px;">
-                                        <button type="button" class="btn btn-outline-success previous" id="previous_1">Previous</button>
+                                        <input type="email" id="email" name="email" class="inputs" required
+                                            placeholder="enter email ">
                                     </div>
                                 </div>
                                 <div class="col-md-2"></div>
@@ -159,7 +166,8 @@
                                     <div style="margin-top: 49px;">
                                         <label for="lname" class="labels">Last Name </label>
                                         <br>
-                                        <input type="text" id="lastname" class="inputs" name="lastname" required placeholder="enter the lastname">                      
+                                        <input type="text" id="lastname" class="inputs" name="lastname" required
+                                            placeholder="enter the lastname">
                                     </div>
                                     <div>
                                         <label for="gender" class="labels">Gender </label>
@@ -169,38 +177,35 @@
                                             <option value="Female">Female</option>
                                             <option value="Male">Male</option>
                                             <option value="Others">Others</option>
-                                        </select>                      
+                                        </select>
                                     </div>
                                     <div>
                                         <Label for="contact_number" class="labels">Contact Number </Label>
                                         <br>
-                                        <input type="number" id="contact_number" name="contact_number" class="inputs" required
-                                            placeholder="enter the number ">                      
-                                    </div>
-                                    <div class="d-flex justify-content-end" style="margin-top: 15px;">
-                                        <button type="button" class="btn btn-outline-success next" id="next_1">Next</button>
+                                        <input type="number" id="contact_number" name="contact_number" class="inputs"
+                                            required placeholder="enter the number ">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- THIS IS THE SECOND CONTAINER -->
-                        <div class="container" >
+                        <div class="container">
                             <div class="row">
                                 <div class="col-md-5">
-                                    <h4 style="color: #147849;margin-bottom: 20px;margin-top: 5px;">User Credentials</h4>
+                                    <h4 style="color: #147849;margin-bottom: 20px;margin-top: 5px;">User Credentials
+                                    </h4>
                                     <div>
                                         <label for="username" class="labels">Username </label>
                                         <br>
-                                        <input type="text" id="username" name="username" class="inputs" required placeholder="enter Username">                      
+                                        <input type="text" id="username" name="username" class="inputs" required
+                                            placeholder="enter Username">
                                     </div>
                                     <h4 style="color: #147849;margin-bottom: 20px;">Admin Authorization</h4>
                                     <div>
                                         <label for="admin_pass" class="labels">Admin Password </label>
                                         <br>
-                                        <input type="password" id="admin_pass" name="admin_pass" class="inputs" required placeholder="Enter Admin Password">                      
-                                    </div>
-                                    <div class="" style="margin-top: 35px;">
-                                        <button type="button" class="btn btn-outline-success previous" id="previous_2">Previous</button>
+                                        <input type="password" id="admin_pass" name="admin_pass" class="inputs" required
+                                            placeholder="Enter Admin Password">
                                     </div>
                                 </div>
                                 <div class="col-md-2"></div>
@@ -208,22 +213,31 @@
                                     <div style="margin-top: 50px;">
                                         <label for="pass" class="labels">Password </label>
                                         <br>
-                                        <input type="password" id="pass" name="pass" class="inputs" required placeholder="enter password">                      
+                                        <input type="password" id="pass" name="pass" class="inputs" required
+                                            placeholder="enter password">
                                     </div>
                                     <div style="margin-top: 50px;">
                                         <label for="id" class="labels">Staff ID </label>
                                         <br>
-                                        <input type="number" id="id" name="id" class="inputs" required placeholder="Give Staff ID for Security">                      
-                                    </div>
-                                    <div class="d-flex justify-content-end" style="margin-top: 35px;">
-                                        <button type="button" class="btn btn-outline-success" id="submit">Submit</button>
+                                        <input type="number" id="id" name="id" class="inputs" required
+                                            placeholder="Give Staff ID for Security">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>          
+                        <div class="d-flex justify-content-between"
+                            style="position: absolute; bottom: 2%;left: 1%;width: 100%;">
+                            <button type="button" class="btn btn-outline-success previous"
+                                id="previous">Previous</button>
+                            <button type="button" class="btn btn-outline-success next" id="next">Next</button>
+                        </div>
+                        <div class="d-flex justify-content-end"
+                            style="position:absolute;bottom: 2%;left: 1%; width: 100%;z-index: -1;" id="submit_div">
+                            <button type="button" class="btn btn-outline-success" id="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
-            </div> 
+            </div>
         </div>
     </main>
     <footer class="footer_container">
@@ -290,15 +304,36 @@
         </div>
     </footer>
     <script>
-        let previous1 = document.getElementById("previous_1");
-        previous1.addEventListener("click" , function() {
+        let container1 = document.getElementsByClassName("container")[0];
+        let container2 = document.getElementsByClassName("container")[1];
+        container2.style.display = "none";
 
+        let previous = document.getElementById("previous");
+        let next = document.getElementById("next");
+
+        next.addEventListener("click", () => {
+            container1.style.display = "none";
+            container2.style.display = "block";
+            document.getElementById("submit_div").style.zIndex = 10;
+            next.style.zIndex = -1;
+            previous.disabled = false;
         })
 
-        let previous2 = document.getElementById("previous_2");
+        previous.addEventListener("click", () => {
+            console.log("previuse click");
+            container1.style.display = "block";
+            container2.style.display = "none";
+        })
 
-        let next1 = document.getElementById("next_1");
+        if (container1.style.display != "none") {
+            previous.disabled = true;
+        }
+
+
+
+
         let submit = document.getElementById("submit");
     </script>
 </body>
+
 </html>

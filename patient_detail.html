@@ -137,9 +137,9 @@
                     <div class="progress-steps" data-title="Patient Information"></div>
                 </div>
                 <div class="form_container">
-                    <form action="" method="">
+                    <form action="" method="" style="position: relative;">
                         <!-- THIS IS THE FIRST CONTAINER -->
-                        <div class="container" >
+                        <div class="container">
                             <div class="row justify-content-between">
                                 <div class="col-md-5">
                                     <h4 style="color: #147849;margin-bottom: 20px;">Basic Information</h4>
@@ -168,9 +168,6 @@
                                         <input type="radio" name="gender" id="others" value="Others"
                                             style="margin-bottom: 45px;">
                                     </div>
-                                    <div class="">
-                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
-                                    </div>
                                 </div>
                                 <div class="col-md-2"></div>
                                 <div class="col-md-5">
@@ -186,9 +183,6 @@
                                         <input type="text" id="blood_group" name="blood_group" class="inputs" required
                                             placeholder="enter the blood group" style="margin-bottom: 114px;">
                                     </div>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-success next">Next</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -203,9 +197,6 @@
                                         <input type="number" id="emergency_number" name="emergency_number"
                                             class="inputs" required placeholder="enter the number ">
                                     </div>
-                                    <div class="">
-                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
-                                    </div>
                                 </div>
                                 <div class="col-md-2"></div>
                                 <div class="col-md-5">
@@ -214,9 +205,6 @@
                                         <br>
                                         <input type="email" id="email" name="email" class="inputs" required
                                             placeholder="enter email ">
-                                    </div>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-success next">Next</button>
                                     </div>
                                 </div>
                             </div>
@@ -242,9 +230,6 @@
                                         <label for="date_n_time" class="labels">Date & Time </label>
                                         <br>
                                         <input type="datetime-local" id="date_n_time" name="date_n_time" class="inputs">
-                                    </div>
-                                    <div class="" style="margin-top: 20px;"> 
-                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
                                     </div>
                                 </div>
                                 <div class="col-md-2"></div>
@@ -272,14 +257,11 @@
                                             <option value="serious">Serious</option>
                                         </select>
                                     </div>
-                                    <div class="d-flex justify-content-end" style="margin-top: 20px;">
-                                        <button type="button" class="btn btn-outline-success  next">Next</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- THIS IS THE LAST CONTAINER -->
-                         <div class="container" style="display: none;">
+                        <div class="container" style="display: none;">
                             <div class="row justify-content-between">
                                 <div class="col-md-5">
                                     <h4 style="color: #147849;margin-bottom: 20px;">Patient Information</h4>
@@ -293,9 +275,6 @@
                                         <br>
                                         <textarea placeholder="Short description of patient’s condition" id="initial_info" name="Initial_info"
                                             class="inputs" required style="height: 125px;padding-top: 0.5rem;"></textarea>                  
-                                    </div>
-                                    <div class="">
-                                        <button type="button" class="btn btn-outline-success previous">Previous</button>
                                     </div>
                                 </div>
                                 <div class="col-md-2"></div>
@@ -311,12 +290,16 @@
                                             <option value="normal">Normal</option>
                                         </select>              
                                     </div>
-                                    <div class="d-flex justify-content-end" style="margin-top: 200px;">
-                                        <button type="button" class="btn btn-outline-success" id="submit">Submit</button>
-                                    </div>
                                 </div>
                             </div>
-                         </div>
+                        </div>
+                        <div class="d-flex justify-content-between" style="position: absolute; bottom: 4%;width: 100%;">
+                            <button type="button" class="btn btn-outline-success previous" id="previous">Previous</button>
+                            <button type="button" class="btn btn-outline-success next" id="next">Next</button>   
+                        </div>
+                        <div class="d-flex justify-content-end" style="position:absolute;bottom: 4%;width: 100%;z-index: -1;">
+                            <button type="button" class="btn btn-outline-success" id="submit">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -391,152 +374,3 @@
 </body>
 
 </html>
-
-<!--  -->
-<!-- .................SECTION 1 STARTS..................... -->
-<!-- <div id="first_section">
-            <h5 style="color: #147849;margin-bottom: 20px;">Basic Information</h5>
-            <div class="names">
-                <div>
-                    <label for="firstname" class="labels">First Name </label>
-                    <br>
-                    <input type="text" id="name" class="inputs" name="firstname" required
-                        placeholder="enter the firstname">
-                </div>
-                <div>
-                    <label for="lastname" class="labels">Last Name </label>
-                    <br>
-                    <input type="text" id="lastname" class="inputs" name="lastname" required
-                        placeholder="enter the lastname">
-                </div>
-            </div>
-            <br>
-            <div class="names">
-                <div>
-                    <label for="age" class="labels">Age </label>
-                    <br>
-                    <input type="number" id="age" name="age" class="inputs" required
-                        placeholder="enter the assumed age">
-                </div>
-                <div>
-                    <label for="blood_group" class="labels">Blood Group </label>
-                    <br>
-                    <input type="text" id="blood_group" name="blood_group" class="inputs" required
-                        placeholder="enter the blood group">
-                </div>
-            </div>
-            <br>
-            <div class="gender">
-                <label for="gender" class="labels">Gender </label>
-                <br>
-                <label for="male" class="labels">Male </label>
-                <input type="radio" name="gender" id="male" value="Male" style="margin-right: 15px;">
-                <label for="female" class="labels">Female </label>
-                <input type="radio" name="gender" id="female" value="Female" style="margin-right: 15px;">
-                <label for="others" class="labels">Others</label>
-                <input type="radio" name="gender" id="others" value="Others">
-            </div>
-            <hr style="margin: 20px 5px;">
-            <h5 style="color: #147849;margin-bottom: 20px;">Contact Information</h5>
-            <div class="contact">
-                <div>
-                    <Label for="emergency_number" class="labels">Emergency Number </Label>
-                    <br>
-                    <input type="number" id="emergency_number" name="emergency_number" class="inputs" required
-                        placeholder="enter the number ">
-                </div>
-                <div>
-                    <Label for="email" class="labels">Email </Label>
-                    <br>
-                    <input type="email" id="email" name="email" class="inputs" required placeholder="enter email ">
-                </div>
-            </div>
-            <hr style="margin: 20px 5px;">
-            <h5 style="color: #147849;margin-bottom: 20px;">Hospital Information</h5>
-            <div class="names">
-                <div>
-                    <label for="hospital_name" class="labels">Hospital Name </label>
-                    <br>
-                    <input type="text" id="hospital_name" name="hospital_name" class="inputs" required
-                        placeholder="enter the hospital name">
-                </div>
-                <div>
-                    <label for="hospital_link" class="labels">Hospital Link </label>
-                    <br>
-                    <input type="text" id="hospital_link" name="hospital_link" class="inputs" required
-                        placeholder="give the link to your hospital!">
-                </div>
-            </div>
-            <br>
-            <div class="names">
-                <div>
-                    <label for="ward_name" class="labels">Ward/Block Name : </label>
-                    <br>
-                    <input type="text" id="ward_name" name="ward_name" class="inputs" required
-                        placeholder="enter the ward block">
-                </div>
-                <div>
-                    <label for="bed_num" class="labels">Bed Number : </label>
-                    <br>
-                    <input type="number" id="bed_num" name="bed_number" class="inputs" required
-                        placeholder="enter the bed number">
-                </div>
-            </div>
-            <br>
-            <div class="names">
-                <div>
-                    <label for="date_n_time" class="labels">Date & Time </label>
-                    <br>
-                    <input type="datetime-local" id="date_n_time" name="date_n_time" class="inputs">
-                </div>
-                <div>
-                    <label for="condition" class="labels">Current Condition </label>
-                    <br>
-                    <select name="condition" class="inputs" id="condition" required
-                        style="
-                                                            padding-left: 5px;
-                                                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                        <option value="critical">Critical</option>
-                        <option value="stable">Stable</option>
-                        <option value="serious">Serious</option>
-                    </select>
-                </div>
-            </div>
-        </div> -->
-<!-- .................SECTION 3 STARTS..................... -->
-<!-- <div id="third_section" style="display: none;">
-            <h5 style="color: #147849;margin-bottom: 20px;">Patient Information</h5>
-            <div class="names">
-                <div>
-                    <label for="funds" class="labels">Estimated Funds Required </label>
-                    <br>
-                    <input type="number" id="funds" name="funds" class="inputs" required style="width: 215px;"
-                        placeholder="estimated funds required">
-                </div>
-                <div>
-                    <label for="urgency" class="labels">Urgency Level </label>
-                    <br>
-                    <select name="Urgency" id="urgency" style="height: 40px;
-                                    width: 200px;
-                                    margin-right: 60px;
-                                    padding-left: 5px;
-                                    border-radius: 8px;
-                                    border: 1px solid #147849;
-                                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)" required>
-                        <option value="immediate">Immediate</option>
-                        <option value="Within_24_hours">Within 24 hours</option>
-                        <option value="normal">Normal</option>
-                    </select>
-                </div>
-            </div>
-            <br>
-            <div>
-                <label for="initial_info" class="labels">Initial Diagnosis </label>
-                <br>
-                <textarea placeholder="Short description of patient’s condition" id="initial_info" name="Initial_info"
-                    class="inputs" required style="height: 85px;width: 450px;padding: 5px 10px;"></textarea>
-            </div>
-            <br><br><br>
-            <button type="button" class="btn btn-outline-success" style="margin-left: 175px;">Submit Form</button>
-        </div>
