@@ -113,13 +113,13 @@
 #progress {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 5px;
-    background-color: blue;
+    top: 40%;
+    transform: translateY(-60%);
+    height: 4px;
+    background-color: #40916c;
     width: 0%;
     z-index: -1;
-    transition: 0.4s ease;
+    transition: 1s ease;
 }
 
 .progress-steps {
