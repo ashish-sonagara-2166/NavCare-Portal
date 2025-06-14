@@ -48,7 +48,9 @@
 }
 .boxes {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     height: 250px;
     width: 250px;
@@ -61,10 +63,11 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 19%;
+    /* width: 19%; */
     background-color: rgb(255, 255, 255);
     padding-top: 50px;
-    margin-right: 3.5%;
+    /* margin-right: 3.5%; */
+    padding-right: 0px !important;
 }
 .sidebar_container a {
     display: flex;
@@ -73,7 +76,7 @@
     text-decoration: none;
     color: black;
     height: 12%;
-    width: 100%;
+    /* width: 100%; */
     /* background-color: aqua; */
     margin-top: 1px;
 }
@@ -82,7 +85,7 @@
     border-left: 2px solid #198754;
     border-right: 2px solid #198754;
 }
-.sidebar_container a:active {
+.sidebar_container a.active {
     background-color: #ddf6e9;
     border-left: 3px solid #198754;
     border-right: 3px solid #198754;
@@ -91,7 +94,7 @@
 .progress_bar {
     margin-top: 1%;
     margin-left: 29%;
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -119,7 +122,7 @@
     background-color: #40916c;
     width: 0%;
     z-index: -1;
-    transition: 1s ease;
+    transition: 0.6s ease;
 }
 
 .progress-steps {
@@ -158,13 +161,13 @@
 /* ....................FORM CONTAINER CSS...................... */
 .form_container {
     height: 90%;
-    width: 98%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     padding: 26px 0px;
-    margin: 20px 5px;
+    margin: 20px 15px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
     overflow: auto;
 }
@@ -191,7 +194,16 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
-.btn{
+#previous{
+    width: 15%;
+}
+#next{
+    width: 15%;
+}
+#submit{
+    position: absolute;
+    left: 85%;
+    z-index: -1;
     width: 15%;
 }
 /* .................FOOTER CONTAINER STYLE ........................... */
